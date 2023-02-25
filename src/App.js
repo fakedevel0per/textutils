@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div className="container">
       <TextForm heading="Enter the text to analyze Below"/>
       </div>
+      <Footer webLink="convertext.com"/>
     </>
   );
 }

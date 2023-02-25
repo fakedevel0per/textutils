@@ -44,6 +44,7 @@ export default function TextForm(props) {
 
 
 
+
   return (
     <>
     <div>
@@ -58,6 +59,8 @@ export default function TextForm(props) {
     </div>
     <div className="container my-3">
         <h2>Your text summary</h2>
+
+
         <p>{arr.length} words and {text.length} characters</p>
         <p>It will take {stringTime} to Read</p>
         <h2>Preview</h2>

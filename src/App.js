@@ -8,8 +8,7 @@ import About from './components/About';
 import {
   BrowserRouter as Router,
   Route,
-  Routes,
-  Link
+  Routes
 } from "react-router-dom";
 
 function App() {
@@ -44,9 +43,9 @@ function App() {
       <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
       <div className="container">
-      <Routes>
-          <Route path="/" element={<TextForm heading="Enter the text to analyze Below" showAlert={showAlert} mode={mode}/>}/>
-          <Route path="/about" element={<About/>}/>
+        <Routes>
+          <Route exact path="/" element={<TextForm heading="Enter the text to analyze Below" toggleMode={toggleMode} showAlert={showAlert} mode={mode}/>}/>
+          <Route exact path="/about" element={<About/>}/>
         </Routes>
       </div>
       <Footer webLink="convertext.com"/>

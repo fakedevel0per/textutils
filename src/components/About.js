@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 
-export default function About() {
+export default function About(props) {
 
     const [myStyle, setmySyle] = useState({
-        color: 'white',
-        backgroundColor: 'black'
+        color: 'black',
+        backgroundColor: 'white'
     })
 
     //TOGGLE BUTTON TEXT
@@ -12,7 +12,7 @@ export default function About() {
 
     //TOGGLE STYLE FUNCTION
 const toggleStyle = ()=>{
-    if(myStyle.color === 'white'){
+    if(btntext === "Enable Light Mode"){
         setmySyle({
         color: 'black',
         backgroundColor: 'white'
@@ -22,12 +22,13 @@ const toggleStyle = ()=>{
     }else{
         setmySyle({
             color: 'white',
-            backgroundColor: 'black'
+            backgroundColor: '#041525'
             })
         setbtntext("Enable Light Mode");
 
     }
 }
+
 
 
   return (

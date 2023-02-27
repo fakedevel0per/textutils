@@ -4,12 +4,12 @@ import Navbar from './components/Navbar';
 import Alert from './components/Alert';
 import TextForm from './components/TextForm';
 import Footer from './components/Footer';
-import About from './components/About';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes
-} from "react-router-dom";
+// import About from './components/About';
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Routes
+// } from "react-router-dom";
 
 function App() {
   // const [alert, setAlert] = useState({msg: 'default', type: 'success'});
@@ -39,17 +39,18 @@ function App() {
   }
   return (
     <>
-      <Router>
+      {/* <Router> */}
       <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
       <div className="container">
-        <Routes>
+        <TextForm heading="Enter the text to analyze Below" toggleMode={toggleMode} showAlert={showAlert} mode={mode}/>
+        {/* <Routes>
           <Route exact path="/" element={<TextForm heading="Enter the text to analyze Below" toggleMode={toggleMode} showAlert={showAlert} mode={mode}/>}/>
           <Route exact path="/about" element={<About/>}/>
-        </Routes>
+        </Routes> */}
       </div>
       <Footer webLink="convertext.com"/>
-      </Router>
+      {/* </Router>/ */}
     </>
   );
 }

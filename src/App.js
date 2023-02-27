@@ -4,7 +4,13 @@ import Navbar from './components/Navbar';
 import Alert from './components/Alert';
 import TextForm from './components/TextForm';
 import Footer from './components/Footer';
-// import About from './components/About';
+import About from './components/About';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link
+} from "react-router-dom";
 
 function App() {
   // const [alert, setAlert] = useState({msg: 'default', type: 'success'});
@@ -34,14 +40,17 @@ function App() {
   }
   return (
     <>
-      {/* <Navbar title="PratikReact Blogs" aboutText="My About"/> */}
+      <Router>
       <Navbar title="TextUtils" aboutText="About" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
       <div className="container">
-      <TextForm heading="Enter the text to analyze Below" showAlert={showAlert} mode={mode}/>
-      {/* <About/> */}
+      <Routes>
+          <Route path="/" element={<TextForm heading="Enter the text to analyze Below" showAlert={showAlert} mode={mode}/>}/>
+          <Route path="/about" element={<About/>}/>
+        </Routes>
       </div>
       <Footer webLink="convertext.com"/>
+      </Router>
     </>
   );
 }
